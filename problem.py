@@ -8,6 +8,16 @@ class policy():
             return vec_pol[state]
         self.policy = pol
 
+    def generate_p_f(self):
+        def prob(action, state):
+            if self.policy(state) == action:
+                return 1
+            else:
+                return 0
+        
+        self.policy_p = prob
+
+
 class problem():
     def __init__(self, pol : policy, N = 100):
         self.N = N
@@ -108,7 +118,8 @@ def aggre_policy_p( action, state):
         return 0
 
 
-aggre_policy = policy(aggre_policy, aggre_policy_p)
+agg_policy = policy(aggre_policy, aggre_policy_p)
+agg_problem = problem(agg_policy)
 
 ###check vec_to_f#######
 lazy_policy = policy(lazy_p, lazy_p_p)

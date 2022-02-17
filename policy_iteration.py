@@ -65,6 +65,6 @@ def policy_iteration(problem_input: problem):
     print(loop)
     return pi
 
-print("start")
+# print("start")
 
-print(policy_iteration(lazy_problem))
+# print(policy_iteration(lazy_problem))

@@ -11,7 +11,7 @@ def value_iteration(problem_input: problem):
     r = problem_input.reward
     p = problem_input.transition_p
     gamma = problem_input.gamma
-    V = [1]*len(S)#iterative_policy_evaluation(problem_input)
+    V = [1]*len(S) #iterative_policy_evaluation(problem_input)
     threshold = 1e-5
 
     def sum_s_r(action, state):
@@ -41,6 +41,6 @@ def value_iteration(problem_input: problem):
 
 
 
-print("start")
+# print("start")
 
-print(value_iteration(lazy_problem))
+# print(value_iteration(lazy_problem))
